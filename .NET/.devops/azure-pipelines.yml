@@ -1,0 +1,23 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'windows-latest'
+
+steps:
+- task: CmdLine@2
+  inputs:
+    script: 'Build.CI.cmd'
+    workingDirectory: '$(Build.SourcesDirectory)\.NET\'
+  displayName: 'Run Build.CI.cmd'
+
+- task: CmdLine@2
+  inputs:
+    script: 'CreateAllPackages.cmd'
+    workingDirectory: '$(Build.SourcesDirectory)\.NET\'
+  displayName: 'Run CreateAllPackages.cmd'
