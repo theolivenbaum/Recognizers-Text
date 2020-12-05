@@ -14,7 +14,7 @@
     <copyright>© Microsoft Corporation. All rights reserved.</copyright>
     <tags>nlp entity-extraction parser-library recognizer numex numbers netstandard2.0</tags>
     <dependencies>
-      <dependency id="Microsoft.Recognizers.Text" version="$basic$"/>
+      <dependency id="Compiled.Recognizers.Text" version="$basic$"/>
     </dependencies>
   </metadata>
   <files>
