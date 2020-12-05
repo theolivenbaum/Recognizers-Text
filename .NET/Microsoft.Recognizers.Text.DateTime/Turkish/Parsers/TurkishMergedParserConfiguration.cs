@@ -15,7 +15,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Turkish
         public static readonly Regex SinceRegex =
             new Regex(DateTimeDefinitions.SinceRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public TurkishMergedParserConfiguration(IDateTimeOptionsConfiguration config)
             : base(config)

@@ -9,7 +9,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Hindi
 {
    public class HindiHolidayParserConfiguration : BaseHolidayParserConfiguration
     {
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public HindiHolidayParserConfiguration(IDateTimeOptionsConfiguration config)
             : base(config)

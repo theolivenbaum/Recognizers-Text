@@ -23,7 +23,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Chinese
     public class ChineseDurationExtractorConfiguration : ChineseBaseDateTimeExtractorConfiguration<DurationType>
     {
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private static readonly IExtractor InternalExtractor = new NumberWithUnitExtractor(new DurationExtractorConfiguration());
 

@@ -9,7 +9,7 @@ namespace Microsoft.Recognizers.Text.DateTime.English
     public class EnglishSetParserConfiguration : BaseDateTimeOptionsConfiguration, ISetParserConfiguration
     {
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private static readonly Regex DoubleMultiplierRegex =
             new Regex(DateTimeDefinitions.DoubleMultiplierRegex, RegexFlags);

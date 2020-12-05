@@ -16,7 +16,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Japanese
             LunarHolidayRegex,
         };
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public JapaneseHolidayExtractorConfiguration(IDateTimeOptionsConfiguration config)
             : base(config)

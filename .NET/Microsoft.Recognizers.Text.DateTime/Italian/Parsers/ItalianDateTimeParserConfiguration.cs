@@ -8,7 +8,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Italian
 {
     public class ItalianDateTimeParserConfiguration : BaseDateTimeOptionsConfiguration, IDateTimeParserConfiguration
     {
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public ItalianDateTimeParserConfiguration(ICommonDateTimeParserConfiguration config)
             : base(config)

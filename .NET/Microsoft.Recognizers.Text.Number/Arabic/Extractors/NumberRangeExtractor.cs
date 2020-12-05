@@ -10,7 +10,7 @@ namespace Microsoft.Recognizers.Text.Number.Arabic
 {
     public class NumberRangeExtractor : BaseNumberRangeExtractor
     {
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture | RegexOptions.RightToLeft;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture | RegexOptions.RightToLeft;
 
         private readonly BaseNumberExtractor numberExtractor;
 

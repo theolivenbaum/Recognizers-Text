@@ -52,7 +52,7 @@ namespace Microsoft.Recognizers.Text.DateTime.French
 
         public static readonly StringMatcher SuperfluousWordMatcher = new StringMatcher();
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public FrenchMergedExtractorConfiguration(IDateTimeOptionsConfiguration config)
             : base(config)

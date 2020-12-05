@@ -56,7 +56,7 @@ namespace Microsoft.Recognizers.Text.DateTime.French
         public static readonly Regex WeekDaysRegex =
             new Regex(DateTimeDefinitions.WeekDayRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private static readonly Regex[] SimpleCases =
         {

@@ -9,7 +9,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Japanese
     public class JapaneseTimePeriodExtractorConfiguration : JapaneseBaseDateTimeExtractorConfiguration<PeriodType>
     {
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public JapaneseTimePeriodExtractorConfiguration()
         {

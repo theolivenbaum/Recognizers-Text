@@ -26,7 +26,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Hindi
             H3,
         };
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public HindiHolidayExtractorConfiguration(IDateTimeOptionsConfiguration config)
             : base(config)

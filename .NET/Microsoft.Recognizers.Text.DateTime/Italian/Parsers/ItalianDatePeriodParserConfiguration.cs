@@ -39,7 +39,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Italian
         public static readonly Regex UnspecificEndOfRangeRegex =
             new Regex(DateTimeDefinitions.UnspecificEndOfRangeRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public ItalianDatePeriodParserConfiguration(ICommonDateTimeParserConfiguration config)
             : base(config)

@@ -55,7 +55,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Dutch
         public static readonly Regex LessThanRegex =
             new Regex(DateTimeDefinitions.LessThanRegex, RegexFlags | RegexOptions.RightToLeft);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public DutchDurationExtractorConfiguration(IDateTimeOptionsConfiguration config)
             : base(config)

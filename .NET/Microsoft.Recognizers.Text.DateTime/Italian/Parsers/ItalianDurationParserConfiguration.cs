@@ -9,7 +9,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Italian
     {
         public static readonly Regex InexactNumberUnitRegex2 = new Regex(DateTimeDefinitions.InexactNumberUnitRegex2, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public ItalianDurationParserConfiguration(ICommonDateTimeParserConfiguration config)
             : base(config)

@@ -7,7 +7,7 @@ namespace Microsoft.Recognizers.Text.Number.Hindi
     public class HindiNumberRangeParserConfiguration : INumberRangeParserConfiguration
     {
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public HindiNumberRangeParserConfiguration(INumberOptionsConfiguration config)
         {

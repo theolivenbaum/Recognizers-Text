@@ -10,7 +10,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Spanish
     public class SpanishDateTimeParserConfiguration : BaseDateTimeOptionsConfiguration, IDateTimeParserConfiguration
     {
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public SpanishDateTimeParserConfiguration(ICommonDateTimeParserConfiguration config)
             : base(config)

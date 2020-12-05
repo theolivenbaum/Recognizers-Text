@@ -18,7 +18,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Dutch
             H,
         };
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public DutchHolidayExtractorConfiguration(IDateTimeOptionsConfiguration config)
             : base(config)

@@ -53,7 +53,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Dutch
         public static readonly Regex RestOfDateTimeRegex =
             new Regex(DateTimeDefinitions.RestOfDateTimeRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private static readonly Regex GeneralEndingRegex =
             new Regex(DateTimeDefinitions.GeneralEndingRegex, RegexFlags);

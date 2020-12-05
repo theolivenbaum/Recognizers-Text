@@ -7,7 +7,7 @@ namespace Microsoft.Recognizers.Text.Number.Hindi
 {
     public class NumberRangeExtractor : BaseNumberRangeExtractor
     {
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public NumberRangeExtractor(INumberOptionsConfiguration config)
             : base(

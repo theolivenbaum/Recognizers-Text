@@ -11,7 +11,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Spanish
         public static readonly Regex ConnectorRegex =
             new Regex(DateTimeDefinitions.ConnectorRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public DateTimePeriodParser(IDateTimePeriodParserConfiguration configuration)
             : base(configuration)

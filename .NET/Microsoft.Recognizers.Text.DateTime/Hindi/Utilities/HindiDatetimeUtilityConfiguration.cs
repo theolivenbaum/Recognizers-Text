@@ -45,7 +45,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Hindi.Utilities
         public static readonly Regex RangePrefixRegex =
             new Regex(DateTimeDefinitions.RangePrefixRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         Regex IDateTimeUtilityConfiguration.LaterRegex => LaterRegex;
 

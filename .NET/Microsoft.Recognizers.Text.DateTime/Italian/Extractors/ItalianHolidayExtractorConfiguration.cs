@@ -26,7 +26,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Italian
             H3,
         };
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public ItalianHolidayExtractorConfiguration(IDateTimeOptionsConfiguration config)
             : base(config)

@@ -9,7 +9,7 @@ namespace Microsoft.Recognizers.Text.Number.Dutch
 {
     public class FractionExtractor : BaseNumberExtractor
     {
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private static readonly ConcurrentDictionary<(NumberMode, NumberOptions), FractionExtractor> Instances =
             new ConcurrentDictionary<(NumberMode, NumberOptions), FractionExtractor>();

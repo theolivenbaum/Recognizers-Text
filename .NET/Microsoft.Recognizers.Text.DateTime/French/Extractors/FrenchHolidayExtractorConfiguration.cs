@@ -31,7 +31,7 @@ namespace Microsoft.Recognizers.Text.DateTime.French
             H4,
         };
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public FrenchHolidayExtractorConfiguration(IDateTimeOptionsConfiguration config)
             : base(config)

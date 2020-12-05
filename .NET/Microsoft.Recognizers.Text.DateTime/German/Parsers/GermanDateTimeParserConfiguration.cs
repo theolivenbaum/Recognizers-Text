@@ -9,7 +9,7 @@ namespace Microsoft.Recognizers.Text.DateTime.German
     public class GermanDateTimeParserConfiguration : BaseDateTimeOptionsConfiguration, IDateTimeParserConfiguration
     {
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public GermanDateTimeParserConfiguration(ICommonDateTimeParserConfiguration config)
             : base(config)

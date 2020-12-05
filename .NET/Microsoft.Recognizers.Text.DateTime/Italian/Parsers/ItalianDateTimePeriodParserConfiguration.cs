@@ -25,7 +25,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Italian
         public static readonly Regex NextSuffixRegex =
             new Regex(DateTimeDefinitions.NextSuffixRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public ItalianDateTimePeriodParserConfiguration(ICommonDateTimeParserConfiguration config)
             : base(config)

@@ -9,7 +9,7 @@ namespace Microsoft.Recognizers.Text.Number.Arabic
 {
     public class IntegerExtractor : BaseNumberExtractor
     {
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture | RegexOptions.RightToLeft;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture | RegexOptions.RightToLeft;
 
         private static readonly ConcurrentDictionary<string, IntegerExtractor> Instances =
             new ConcurrentDictionary<string, IntegerExtractor>();

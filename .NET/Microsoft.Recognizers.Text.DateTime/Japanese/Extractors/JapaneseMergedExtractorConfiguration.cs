@@ -23,7 +23,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Japanese
 
         public static readonly Regex EqualRegex = new Regex(BaseDateTime.EqualRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private static readonly Regex DenyFilterRegex = new Regex(@"^\d{1,2}号", RegexFlags);
 

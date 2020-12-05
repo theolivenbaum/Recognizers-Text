@@ -61,7 +61,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Hindi
         public static readonly Regex GeneralEndingRegex =
             new Regex(DateTimeDefinitions.GeneralEndingRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private static readonly Regex FromRegex =
             new Regex(DateTimeDefinitions.FromTokenRegex, RegexFlags);

@@ -55,7 +55,7 @@ namespace Microsoft.Recognizers.Text.DateTime.French
         public static readonly Regex LessThanRegex =
             new Regex(DateTimeDefinitions.LessThanRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public FrenchDurationExtractorConfiguration(IDateTimeOptionsConfiguration config)
             : base(config)

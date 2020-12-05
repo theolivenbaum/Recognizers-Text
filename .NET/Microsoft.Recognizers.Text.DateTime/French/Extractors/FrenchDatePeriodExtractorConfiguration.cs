@@ -182,7 +182,7 @@ namespace Microsoft.Recognizers.Text.DateTime.French
         public static readonly Regex NowRegex =
             new Regex(DateTimeDefinitions.NowRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private static readonly Regex FromRegex =
             new Regex(DateTimeDefinitions.FromRegex, RegexFlags);

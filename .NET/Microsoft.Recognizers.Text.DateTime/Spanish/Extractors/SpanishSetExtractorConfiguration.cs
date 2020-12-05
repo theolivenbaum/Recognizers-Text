@@ -31,7 +31,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Spanish
         public static readonly Regex SetEachRegex =
             new Regex(DateTimeDefinitions.SetEachRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public SpanishSetExtractorConfiguration(IDateTimeOptionsConfiguration config)
             : base(config)

@@ -9,7 +9,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Hindi
 {
     public class HindiDateParserConfiguration : BaseDateTimeOptionsConfiguration, IDateParserConfiguration
     {
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private IImmutableList<string> lastCardinalTerms = DateTimeDefinitions.LastCardinalTerms.ToImmutableList();
 

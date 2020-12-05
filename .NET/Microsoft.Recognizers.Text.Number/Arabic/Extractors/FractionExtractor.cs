@@ -10,7 +10,7 @@ namespace Microsoft.Recognizers.Text.Number.Arabic
     public class FractionExtractor : BaseNumberExtractor
     {
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture | RegexOptions.RightToLeft;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture | RegexOptions.RightToLeft;
 
         private static readonly ConcurrentDictionary<(NumberMode, NumberOptions), FractionExtractor> Instances =
             new ConcurrentDictionary<(NumberMode, NumberOptions), FractionExtractor>();

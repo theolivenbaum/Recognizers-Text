@@ -125,7 +125,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Spanish
 
         public static readonly ImmutableDictionary<string, int> MonthOfYear = DateTimeDefinitions.MonthOfYear.ToImmutableDictionary();
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public SpanishDateExtractorConfiguration(IDateTimeOptionsConfiguration config)
             : base(config)

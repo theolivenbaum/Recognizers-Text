@@ -15,7 +15,7 @@ namespace Microsoft.Recognizers.Text.DateTime.French
         public static readonly Regex PmTimeRegex =
             new Regex(DateTimeDefinitions.PMTimeRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public FrenchDateTimeParserConfiguration(ICommonDateTimeParserConfiguration config)
             : base(config)

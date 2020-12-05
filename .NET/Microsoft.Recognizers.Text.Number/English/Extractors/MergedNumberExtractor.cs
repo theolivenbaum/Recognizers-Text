@@ -7,7 +7,7 @@ namespace Microsoft.Recognizers.Text.Number.English
 {
     internal class MergedNumberExtractor : BaseMergedNumberExtractor
     {
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private static readonly ConcurrentDictionary<(NumberMode, NumberOptions), MergedNumberExtractor> Instances =
             new ConcurrentDictionary<(NumberMode, NumberOptions), MergedNumberExtractor>();

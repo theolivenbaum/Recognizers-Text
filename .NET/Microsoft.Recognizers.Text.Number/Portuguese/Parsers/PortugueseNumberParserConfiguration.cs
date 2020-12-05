@@ -12,7 +12,7 @@ namespace Microsoft.Recognizers.Text.Number.Portuguese
     public class PortugueseNumberParserConfiguration : BaseNumberParserConfiguration
     {
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public PortugueseNumberParserConfiguration(INumberOptionsConfiguration config)
         {

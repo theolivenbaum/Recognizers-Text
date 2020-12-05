@@ -20,7 +20,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Japanese
 
         public static readonly Regex SimplePmRegex = new Regex(DateTimeDefinitions.DateTimeSimplePmRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private static readonly IDateTimeExtractor SingleDateExtractor = new JapaneseDateExtractorConfiguration();
 

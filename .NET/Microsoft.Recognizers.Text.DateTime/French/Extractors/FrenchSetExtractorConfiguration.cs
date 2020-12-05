@@ -35,7 +35,7 @@ namespace Microsoft.Recognizers.Text.DateTime.French
         public static readonly Regex SetEachRegex =
             new Regex(DateTimeDefinitions.SetEachRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public FrenchSetExtractorConfiguration(IDateTimeOptionsConfiguration config)
             : base(config)

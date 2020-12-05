@@ -19,7 +19,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Chinese
 
         public static readonly ImmutableDictionary<string, long> UnitValueMap = DateTimeDefinitions.DurationUnitValueMap.ToImmutableDictionary();
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private static readonly Regex DurationUnitRegex = new Regex(DateTimeDefinitions.DurationUnitRegex, RegexFlags);
 

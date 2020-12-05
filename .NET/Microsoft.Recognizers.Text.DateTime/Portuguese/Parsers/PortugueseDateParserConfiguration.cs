@@ -10,7 +10,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Portuguese
     public class PortugueseDateParserConfiguration : BaseDateTimeOptionsConfiguration, IDateParserConfiguration
     {
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public PortugueseDateParserConfiguration(ICommonDateTimeParserConfiguration config)
             : base(config)

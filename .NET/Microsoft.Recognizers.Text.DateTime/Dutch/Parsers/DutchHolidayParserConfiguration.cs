@@ -9,7 +9,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Dutch
 {
     public class DutchHolidayParserConfiguration : BaseHolidayParserConfiguration
     {
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public DutchHolidayParserConfiguration(IDateTimeOptionsConfiguration config)
             : base(config)

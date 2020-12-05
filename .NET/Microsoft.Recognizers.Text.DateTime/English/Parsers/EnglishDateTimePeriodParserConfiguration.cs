@@ -20,7 +20,7 @@ namespace Microsoft.Recognizers.Text.DateTime.English
         public static readonly Regex NightStartEndRegex =
             new Regex(DateTimeDefinitions.NightStartEndRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public EnglishDateTimePeriodParserConfiguration(ICommonDateTimeParserConfiguration config)
             : base(config)

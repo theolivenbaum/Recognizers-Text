@@ -26,7 +26,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Portuguese
         public static readonly Regex UnspecificEndOfRangeRegex =
             new Regex(DateTimeDefinitions.UnspecificEndOfRangeRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public PortugueseDatePeriodParserConfiguration(ICommonDateTimeParserConfiguration config)
             : base(config)

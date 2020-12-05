@@ -59,7 +59,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Spanish
         public static readonly Regex LessThanRegex =
             new Regex(DateTimeDefinitions.LessThanRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public SpanishDurationExtractorConfiguration(IDateTimeOptionsConfiguration config)
             : base(config)

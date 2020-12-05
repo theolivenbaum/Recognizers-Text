@@ -9,7 +9,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Turkish
 {
     public class TurkishTimePeriodParserConfiguration : BaseDateTimeOptionsConfiguration, ITimePeriodParserConfiguration
     {
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private static readonly Regex PluralTokenRegex =
             new Regex(DateTimeDefinitions.PluralTokenRegex, RegexFlags);

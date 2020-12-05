@@ -11,7 +11,7 @@ namespace Microsoft.Recognizers.Text.DateTime.English
 {
     public class EnglishHolidayParserConfiguration : BaseHolidayParserConfiguration
     {
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public EnglishHolidayParserConfiguration(IDateTimeOptionsConfiguration config)
             : base(config)

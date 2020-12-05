@@ -121,7 +121,7 @@ namespace Microsoft.Recognizers.Text.DateTime.English
         public static readonly ImmutableDictionary<string, int> MonthOfYear =
             DateTimeDefinitions.MonthOfYear.ToImmutableDictionary();
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private static readonly Regex DayRegex =
             new Regex(DateTimeDefinitions.ImplicitDayRegex, RegexFlags);

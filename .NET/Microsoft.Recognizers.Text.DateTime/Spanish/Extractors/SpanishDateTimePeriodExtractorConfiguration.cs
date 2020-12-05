@@ -64,7 +64,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Spanish
         public static readonly Regex PeriodSpecificTimeOfDayRegex =
             new Regex(DateTimeDefinitions.PeriodSpecificTimeOfDayRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private static readonly Regex FromRegex =
             new Regex(DateTimeDefinitions.FromRegex, RegexFlags);

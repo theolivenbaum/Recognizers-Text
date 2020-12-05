@@ -33,7 +33,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Italian
         public static readonly Regex SetEachRegex =
             new Regex(DateTimeDefinitions.SetEachRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public ItalianSetExtractorConfiguration(IDateTimeOptionsConfiguration config)
             : base(config)

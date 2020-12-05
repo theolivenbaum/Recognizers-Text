@@ -59,7 +59,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Hindi
 
         public static readonly StringMatcher SuperfluousWordMatcher = new StringMatcher();
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public HindiMergedExtractorConfiguration(IDateTimeOptionsConfiguration config)
             : base(config)

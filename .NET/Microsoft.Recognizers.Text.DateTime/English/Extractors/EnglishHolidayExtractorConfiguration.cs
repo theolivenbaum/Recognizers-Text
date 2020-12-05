@@ -18,7 +18,7 @@ namespace Microsoft.Recognizers.Text.DateTime.English
             H,
         };
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public EnglishHolidayExtractorConfiguration(IDateTimeOptionsConfiguration config)
             : base(config)

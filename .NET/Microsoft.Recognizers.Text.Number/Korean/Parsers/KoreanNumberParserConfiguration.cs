@@ -10,7 +10,7 @@ namespace Microsoft.Recognizers.Text.Number.Korean
     public class KoreanNumberParserConfiguration : BaseNumberParserConfiguration, ICJKNumberParserConfiguration
     {
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public KoreanNumberParserConfiguration(INumberOptionsConfiguration config)
         {

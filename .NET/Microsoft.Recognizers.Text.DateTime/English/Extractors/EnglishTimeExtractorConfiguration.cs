@@ -120,7 +120,7 @@ namespace Microsoft.Recognizers.Text.DateTime.English
             ConnectNumRegex,
         };
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public EnglishTimeExtractorConfiguration(IDateTimeOptionsConfiguration config)
             : base(config)

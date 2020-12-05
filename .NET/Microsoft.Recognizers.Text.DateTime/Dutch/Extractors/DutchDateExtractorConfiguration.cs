@@ -120,7 +120,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Dutch
         public static readonly Regex BeforeAfterRegex =
             new Regex(DateTimeDefinitions.BeforeAfterRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private static readonly Regex DayRegex =
             new Regex(DateTimeDefinitions.ImplicitDayRegex, RegexFlags);

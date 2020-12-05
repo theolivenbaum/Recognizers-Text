@@ -10,7 +10,7 @@ namespace Microsoft.Recognizers.Text.Number.Japanese
     public class IntegerExtractor : BaseNumberExtractor
     {
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public IntegerExtractor(CJKNumberExtractorMode mode = CJKNumberExtractorMode.Default)
         {

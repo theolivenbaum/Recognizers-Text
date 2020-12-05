@@ -24,7 +24,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Hindi
         public static readonly Regex UnspecificEndOfRangeRegex =
             new Regex(DateTimeDefinitions.UnspecificEndOfRangeRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private static IList<string> monthTermsPadded =
             DateTimeDefinitions.MonthTerms.Select(str => $" {str} ").ToList();

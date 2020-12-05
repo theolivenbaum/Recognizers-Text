@@ -37,7 +37,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Spanish
         public static readonly Regex UnspecificEndOfRangeRegex =
             new Regex(DateTimeDefinitions.UnspecificEndOfRangeRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public SpanishDatePeriodParserConfiguration(ICommonDateTimeParserConfiguration config)
             : base(config)

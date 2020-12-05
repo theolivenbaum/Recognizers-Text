@@ -169,7 +169,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Turkish
         public static readonly Regex CenturySuffixRegex =
             new Regex(DateTimeDefinitions.CenturySuffixRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private static readonly Regex ExcludeSuffixRegex =
             new Regex(DateTimeDefinitions.ExcludeSuffixRegex, RegexFlags);

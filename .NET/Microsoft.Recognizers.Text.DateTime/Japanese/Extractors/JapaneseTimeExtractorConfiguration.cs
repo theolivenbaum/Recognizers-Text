@@ -11,7 +11,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Japanese
         // e.g: 早上九点
         public static readonly string DayDescRegex = DateTimeDefinitions.TimeDayDescRegex;
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public JapaneseTimeExtractorConfiguration()
         {

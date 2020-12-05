@@ -10,7 +10,7 @@ namespace Microsoft.Recognizers.Text.DateTime.English
 {
     public class EnglishTimeParserConfiguration : BaseDateTimeOptionsConfiguration, ITimeParserConfiguration
     {
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private static readonly Regex TimeSuffixFull =
             new Regex(DateTimeDefinitions.TimeSuffixFull, RegexFlags);

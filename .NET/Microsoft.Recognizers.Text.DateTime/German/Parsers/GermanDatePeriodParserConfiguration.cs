@@ -30,7 +30,7 @@ namespace Microsoft.Recognizers.Text.DateTime.German
         public static readonly Regex AfterNextPrefixRegex =
             new Regex(DateTimeDefinitions.AfterNextPrefixRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public GermanDatePeriodParserConfiguration(ICommonDateTimeParserConfiguration config)
             : base(config)

@@ -10,7 +10,7 @@ namespace Microsoft.Recognizers.Text.Number.French
     public class FractionExtractor : BaseNumberExtractor
     {
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private static readonly ConcurrentDictionary<(NumberMode, NumberOptions, string), FractionExtractor> Instances =
             new ConcurrentDictionary<(NumberMode, NumberOptions, string), FractionExtractor>();

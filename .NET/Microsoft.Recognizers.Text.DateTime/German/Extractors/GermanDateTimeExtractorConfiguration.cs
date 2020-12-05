@@ -61,7 +61,7 @@ namespace Microsoft.Recognizers.Text.DateTime.German
         public static readonly Regex SuffixAfterRegex =
             new Regex(DateTimeDefinitions.SuffixAfterRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public GermanDateTimeExtractorConfiguration(IDateTimeOptionsConfiguration config)
             : base(config)

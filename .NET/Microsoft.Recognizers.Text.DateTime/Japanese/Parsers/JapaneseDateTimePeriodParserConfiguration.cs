@@ -24,7 +24,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Japanese
 
         public static readonly Regex NIRegex = new Regex(DateTimeDefinitions.DateTimePeriodNIRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private static readonly IDateTimeExtractor SingleDateExtractor = new JapaneseDateExtractorConfiguration();
 

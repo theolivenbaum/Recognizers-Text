@@ -7,7 +7,7 @@ namespace Microsoft.Recognizers.Text.Number.Turkish
     public class TurkishNumberRangeParserConfiguration : INumberRangeParserConfiguration
     {
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public TurkishNumberRangeParserConfiguration(INumberOptionsConfiguration config)
         {

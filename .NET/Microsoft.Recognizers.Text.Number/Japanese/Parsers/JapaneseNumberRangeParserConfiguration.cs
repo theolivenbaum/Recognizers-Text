@@ -7,7 +7,7 @@ namespace Microsoft.Recognizers.Text.Number.Japanese
     public class JapaneseNumberRangeParserConfiguration : INumberRangeParserConfiguration
     {
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public JapaneseNumberRangeParserConfiguration(INumberOptionsConfiguration config)
         {

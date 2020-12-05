@@ -44,7 +44,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Chinese
 
         public static readonly Regex FutureRegex = new Regex(DateTimeDefinitions.FutureRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private static readonly ChineseTimeExtractorConfiguration SingleTimeExtractor = new ChineseTimeExtractorConfiguration();
 

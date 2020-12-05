@@ -53,7 +53,7 @@ namespace Microsoft.Recognizers.Text.DateTime.German
             new Regex(DateTimeDefinitions.OneOnOneRegex, RegexFlags),
         };
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public GermanMergedExtractorConfiguration(IDateTimeOptionsConfiguration config)
             : base(config)

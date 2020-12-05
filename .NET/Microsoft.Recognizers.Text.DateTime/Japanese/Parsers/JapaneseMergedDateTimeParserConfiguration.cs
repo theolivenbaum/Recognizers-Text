@@ -8,7 +8,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Japanese
     public class JapaneseMergedDateTimeParserConfiguration : BaseMergedDateTimeParser
     {
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private static readonly Regex BeforeRegex = new Regex(DateTimeDefinitions.MergedBeforeRegex, RegexFlags);
 

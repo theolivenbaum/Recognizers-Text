@@ -13,7 +13,7 @@ namespace Microsoft.Recognizers.Text.NumberWithUnit.Dutch
         public static readonly ImmutableDictionary<string, string> TemperatureSuffixList =
             NumbersWithUnitDefinitions.TemperatureSuffixList.ToImmutableDictionary();
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private static readonly ImmutableList<string> AmbiguousValues =
             NumbersWithUnitDefinitions.AmbiguousTemperatureUnitList.ToImmutableList();

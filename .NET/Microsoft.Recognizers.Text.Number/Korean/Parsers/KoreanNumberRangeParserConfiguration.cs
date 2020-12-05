@@ -7,7 +7,7 @@ namespace Microsoft.Recognizers.Text.Number.Korean
     public class KoreanNumberRangeParserConfiguration : INumberRangeParserConfiguration
     {
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public KoreanNumberRangeParserConfiguration(INumberOptionsConfiguration config)
         {

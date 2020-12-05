@@ -14,7 +14,7 @@ namespace Microsoft.Recognizers.Text.NumberWithUnit.French
 {
     public abstract class FrenchNumberWithUnitExtractorConfiguration : INumberWithUnitExtractorConfiguration
     {
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private static readonly Regex CompoundUnitConnRegex =
             new Regex(NumbersWithUnitDefinitions.CompoundUnitConnectorRegex, RegexFlags);

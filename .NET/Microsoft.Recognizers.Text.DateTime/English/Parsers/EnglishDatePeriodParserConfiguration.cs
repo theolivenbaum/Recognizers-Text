@@ -28,7 +28,7 @@ namespace Microsoft.Recognizers.Text.DateTime.English
         public static readonly Regex NowParseRegex =
             new Regex(DateTimeDefinitions.NowParseRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private static IList<string> monthTermsPadded =
             DateTimeDefinitions.MonthTerms.Select(str => $" {str} ").ToList();

@@ -11,7 +11,7 @@ namespace Microsoft.Recognizers.Text.Number.German
     public class GermanNumberParserConfiguration : BaseNumberParserConfiguration
     {
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private static readonly Regex FractionHalfRegex =
             new Regex(NumbersDefinitions.FractionHalfRegex, RegexFlags);

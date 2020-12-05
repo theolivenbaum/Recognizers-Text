@@ -9,7 +9,7 @@ namespace Microsoft.Recognizers.Text.Number.Spanish
     public class NumberRangeExtractor : BaseNumberRangeExtractor
     {
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public NumberRangeExtractor(INumberOptionsConfiguration config)
             : base(NumberExtractor.GetInstance(new BaseNumberOptionsConfiguration(config.Culture, config.Options)),

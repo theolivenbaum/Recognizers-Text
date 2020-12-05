@@ -25,7 +25,7 @@ namespace Microsoft.Recognizers.Text.DateTime.German
             H3,
         };
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public GermanHolidayExtractorConfiguration(IDateTimeOptionsConfiguration config)
             : base(config)

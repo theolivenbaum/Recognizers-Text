@@ -60,7 +60,7 @@ namespace Microsoft.Recognizers.Text.DateTime.English
 
         public static readonly StringMatcher SuperfluousWordMatcher = new StringMatcher();
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public EnglishMergedExtractorConfiguration(IDateTimeOptionsConfiguration config)
             : base(config)

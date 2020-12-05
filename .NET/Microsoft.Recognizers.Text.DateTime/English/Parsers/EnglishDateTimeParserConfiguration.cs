@@ -19,7 +19,7 @@ namespace Microsoft.Recognizers.Text.DateTime.English
         public static readonly Regex NightTimeRegex =
              new Regex(DateTimeDefinitions.NightTimeRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         private static readonly Regex NowTimeRegex =
             new Regex(DateTimeDefinitions.NowTimeRegex, RegexFlags);

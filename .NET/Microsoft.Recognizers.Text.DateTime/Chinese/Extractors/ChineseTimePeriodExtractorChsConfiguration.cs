@@ -29,7 +29,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Chinese
 
         public static readonly string ShortLeftDigitTimeRegex = DateTimeDefinitions.TimePeriodShortLeftDigitTimeRegex;
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public ChineseTimePeriodExtractorChsConfiguration()
         {

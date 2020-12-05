@@ -9,7 +9,7 @@ namespace Microsoft.Recognizers.Text.Number.Hindi
 {
     public class HindiNumberParserConfiguration : BaseIndianNumberParserConfiguration
     {
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public HindiNumberParserConfiguration(INumberOptionsConfiguration config)
         {

@@ -59,7 +59,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Portuguese
         public static readonly Regex LessThanRegex =
             new Regex(DateTimeDefinitions.LessThanRegex, RegexFlags);
 
-        private const RegexOptions RegexFlags = RegexOptions.Singleline | RegexOptions.ExplicitCapture;
+        private const RegexOptions RegexFlags = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.ExplicitCapture;
 
         public PortugueseDurationExtractorConfiguration(IDateTimeOptionsConfiguration config)
             : base(config)
