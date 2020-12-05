@@ -59,12 +59,15 @@ CALL "buildtools\nuget" restore
 
 set configuration=Release
 
+@ECHO on
+
 ECHO.
 ECHO # Generate resources
-CALL !MSBuild! Microsoft.Recognizers.Definitions.Common\Microsoft.Recognizers.Definitions.Common.csproj /t:Clean,Build /p:Configuration=%configuration%;Version=%version%
+CALL !MSBuild! Microsoft.Recognizers.Definitions.Common\Microsoft.Recognizers.Definitions.Common.csproj /t:Clean,Build /p:Configuration=%configuration% /p:Version="%version%"
 
 ECHO # Building .NET solution (%configuration%) with version %version%
-CALL !MSBuild! Microsoft.Recognizers.Text.sln /t:Restore,Clean,Build /p:Configuration=%configuration%;Version=%version%
+CALL !MSBuild! Microsoft.Recognizers.Text.sln /t:Restore,Clean,Build /p:Configuration=%configuration% /p:Version="%version%"
+
 IF %ERRORLEVEL% NEQ 0 (
 	ECHO # Failed to build .NET Project.
 	EXIT /b %ERRORLEVEL%
