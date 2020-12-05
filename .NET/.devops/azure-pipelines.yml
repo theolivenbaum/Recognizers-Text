@@ -1,5 +1,5 @@
 variables:
-  version: 1.4.2.$(build.buildId)
+  version:1.4.2.$(build.buildId)
 
 
 trigger:
