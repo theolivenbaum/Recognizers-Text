@@ -1,5 +1,5 @@
 variables:
-  version:1.4.2.$(build.buildId)
+  version: 1.4.2
 
 
 trigger:
@@ -14,7 +14,7 @@ pool:
 steps:
 - task: CmdLine@2
   inputs:
-    script: 'Build.CI.cmd $(version)'
+    script: 'Build.CI.cmd $(version).$(build.buildId)'
     workingDirectory: '$(Build.SourcesDirectory)\.NET\'
   displayName: 'Run Build.CI.cmd'
 
