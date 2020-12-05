@@ -29,6 +29,6 @@ steps:
   displayName: 'push nuget'
   inputs:
     command: 'push'
-    packagesToPush: '**/*.nupkg'
+    packagesToPush: '$(Build.SourcesDirectory)\.NET\nuget\*.nupkg'
     nuGetFeedType: 'external'
     publishFeedCredentials: 'nuget-curiosity'
