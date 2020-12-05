@@ -1,6 +1,6 @@
-set version=%1
-
 ECHO ==============================.NET BUILD START==============================
+
+ECHO # Compiling with version %version%
 
 @ECHO off
 SETLOCAL EnableDelayedExpansion
@@ -58,8 +58,6 @@ ECHO # Restoring NuGet dependencies
 CALL "buildtools\nuget" restore
 
 set configuration=Release
-
-@ECHO on
 
 ECHO.
 ECHO # Generate resources
