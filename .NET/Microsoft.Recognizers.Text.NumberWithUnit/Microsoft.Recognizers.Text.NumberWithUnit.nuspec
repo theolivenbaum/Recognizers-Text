@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0"?>
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-    <id>Microsoft.Recognizers.Text.NumberWithUnit</id>
+    <id>Compiled.Recognizers.Text.NumberWithUnit</id>
     <version>$version$</version>
     <title>$title$</title>
     <authors>Microsoft</authors>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Microsoft.Recognizers.Text.NumberWithUnit provides robust recognition and resolution of numbers with units expressed in English, Spanish, French, Portuguese, Chinese,
-    German, Dutch, Italian, Turkish, and Hindi.</description>
+    German, Dutch, Italian, Turkish, and Hindi. This is exact same library as the Microsoft.Recognizers.* packages, but with compiled Regex.</description>
     <license type="expression">MIT</license>
-    <projectUrl>https://github.com/Microsoft/Recognizers-Text</projectUrl>
+    <projectUrl>https://github.com/theolivenbaum/Recognizers-Text</projectUrl>
     <icon>images\icon.png</icon>
     <copyright>© Microsoft Corporation. All rights reserved.</copyright>
     <tags>nlp entity-extraction parser-library recognizer numex units netstandard2.0</tags>

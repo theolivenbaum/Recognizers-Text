@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0"?>
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-    <id>Microsoft.Recognizers.Text.Choice</id>
+    <id>Compiled.Recognizers.Text.Choice</id>
     <version>$version$</version>
     <title>$title$</title>
     <authors>Microsoft</authors>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Microsoft.Recognizers.Text.Choice provides recognition of Boolean (yes/no) answers expressed in English, Portuguese, Spanish, Japanese, Chinese,
-    Dutch, French, German, Italian, Swedish, Bulgarian, Turkish, Hindi, and Arabic. As well as base classes to support lists of alternative choices.</description>
+    Dutch, French, German, Italian, Swedish, Bulgarian, Turkish, Hindi, and Arabic. As well as base classes to support lists of alternative choices. This is exact same library as the Microsoft.Recognizers.* packages, but with compiled Regex.</description>
     <license type="expression">MIT</license>
-    <projectUrl>https://github.com/Microsoft/Recognizers-Text</projectUrl>
+    <projectUrl>https://github.com/theolivenbaum/Recognizers-Text</projectUrl>
     <icon>images\icon.png</icon>
     <copyright>© Microsoft Corporation. All rights reserved.</copyright>
     <tags>nlp entity-extraction parser-library recognizer boolean alternatives choices netstandard2.0</tags>
