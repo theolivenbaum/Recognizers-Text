@@ -9,11 +9,11 @@ namespace Microsoft.Recognizers.Text.Sequence
 {
     public class BasePhoneNumberExtractor : BaseSequenceExtractor
     {
-        private static readonly Regex InternationalDialingPrefixRegex = new Regex(BasePhoneNumbers.InternationDialingPrefixRegex);
+        private static readonly Regex InternationalDialingPrefixRegex = RegexCache.Get(BasePhoneNumbers.InternationDialingPrefixRegex);
 
-        private static readonly Regex PreCheckPhoneNumberRegex = new Regex(BasePhoneNumbers.PreCheckPhoneNumberRegex, RegexOptions.Compiled);
+        private static readonly Regex PreCheckPhoneNumberRegex = RegexCache.Get(BasePhoneNumbers.PreCheckPhoneNumberRegex, RegexOptions.Compiled);
 
-        private static readonly Regex SSNFilterRegex = new Regex(BasePhoneNumbers.SSNFilterRegex, RegexOptions.Compiled);
+        private static readonly Regex SSNFilterRegex = RegexCache.Get(BasePhoneNumbers.SSNFilterRegex, RegexOptions.Compiled);
 
         private PhoneNumberConfiguration config;
 
@@ -28,43 +28,43 @@ namespace Microsoft.Recognizers.Text.Sequence
             var regexes = new Dictionary<Regex, string>
             {
                 {
-                    new Regex(BasePhoneNumbers.GeneralPhoneNumberRegex(wordBoundariesRegex, endWordBoundariesRegex), RegexOptions.Compiled),
+                    RegexCache.Get(BasePhoneNumbers.GeneralPhoneNumberRegex(wordBoundariesRegex, endWordBoundariesRegex), RegexOptions.Compiled),
                     Constants.PHONE_NUMBER_REGEX_GENERAL
                 },
                 {
-                    new Regex(BasePhoneNumbers.BRPhoneNumberRegex(wordBoundariesRegex, nonWordBoundariesRegex, endWordBoundariesRegex), RegexOptions.Compiled),
+                    RegexCache.Get(BasePhoneNumbers.BRPhoneNumberRegex(wordBoundariesRegex, nonWordBoundariesRegex, endWordBoundariesRegex), RegexOptions.Compiled),
                     Constants.PHONE_NUMBER_REGEX_BR
                 },
                 {
-                    new Regex(BasePhoneNumbers.UKPhoneNumberRegex(wordBoundariesRegex, nonWordBoundariesRegex, endWordBoundariesRegex), RegexOptions.Compiled),
+                    RegexCache.Get(BasePhoneNumbers.UKPhoneNumberRegex(wordBoundariesRegex, nonWordBoundariesRegex, endWordBoundariesRegex), RegexOptions.Compiled),
                     Constants.PHONE_NUMBER_REGEX_UK
                 },
                 {
-                    new Regex(BasePhoneNumbers.DEPhoneNumberRegex(wordBoundariesRegex, endWordBoundariesRegex), RegexOptions.Compiled),
+                    RegexCache.Get(BasePhoneNumbers.DEPhoneNumberRegex(wordBoundariesRegex, endWordBoundariesRegex), RegexOptions.Compiled),
                     Constants.PHONE_NUMBER_REGEX_DE
                 },
                 {
-                    new Regex(BasePhoneNumbers.USPhoneNumberRegex(wordBoundariesRegex, nonWordBoundariesRegex, endWordBoundariesRegex), RegexOptions.Compiled),
+                    RegexCache.Get(BasePhoneNumbers.USPhoneNumberRegex(wordBoundariesRegex, nonWordBoundariesRegex, endWordBoundariesRegex), RegexOptions.Compiled),
                     Constants.PHONE_NUMBER_REGEX_US
                 },
                 {
-                    new Regex(BasePhoneNumbers.CNPhoneNumberRegex(wordBoundariesRegex, endWordBoundariesRegex), RegexOptions.Compiled),
+                    RegexCache.Get(BasePhoneNumbers.CNPhoneNumberRegex(wordBoundariesRegex, endWordBoundariesRegex), RegexOptions.Compiled),
                     Constants.PHONE_NUMBER_REGEX_CN
                 },
                 {
-                    new Regex(BasePhoneNumbers.DKPhoneNumberRegex(wordBoundariesRegex, endWordBoundariesRegex), RegexOptions.Compiled),
+                    RegexCache.Get(BasePhoneNumbers.DKPhoneNumberRegex(wordBoundariesRegex, endWordBoundariesRegex), RegexOptions.Compiled),
                     Constants.PHONE_NUMBER_REGEX_DK
                 },
                 {
-                    new Regex(BasePhoneNumbers.ITPhoneNumberRegex(wordBoundariesRegex, endWordBoundariesRegex), RegexOptions.Compiled),
+                    RegexCache.Get(BasePhoneNumbers.ITPhoneNumberRegex(wordBoundariesRegex, endWordBoundariesRegex), RegexOptions.Compiled),
                     Constants.PHONE_NUMBER_REGEX_IT
                 },
                 {
-                    new Regex(BasePhoneNumbers.NLPhoneNumberRegex(wordBoundariesRegex, endWordBoundariesRegex), RegexOptions.Compiled),
+                    RegexCache.Get(BasePhoneNumbers.NLPhoneNumberRegex(wordBoundariesRegex, endWordBoundariesRegex), RegexOptions.Compiled),
                     Constants.PHONE_NUMBER_REGEX_NL
                 },
                 {
-                    new Regex(BasePhoneNumbers.SpecialPhoneNumberRegex(wordBoundariesRegex, endWordBoundariesRegex), RegexOptions.Compiled),
+                    RegexCache.Get(BasePhoneNumbers.SpecialPhoneNumberRegex(wordBoundariesRegex, endWordBoundariesRegex), RegexOptions.Compiled),
                     Constants.PHONE_NUMBER_REGEX_SPECIAL
                 },
             };

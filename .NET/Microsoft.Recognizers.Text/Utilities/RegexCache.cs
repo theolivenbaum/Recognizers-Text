@@ -3,7 +3,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace Microsoft.Recognizers.Text.Utilities
+namespace Microsoft.Recognizers.Text
 {
     public static class RegexCache
     {
@@ -12,6 +12,11 @@ namespace Microsoft.Recognizers.Text.Utilities
         public static Regex Get(string pattern, RegexOptions options)
         {
             return _cache.GetOrAdd((pattern, options), k => new Regex(k.pattern, k.options));
+        }
+
+        public static Regex Get(string pattern)
+        {
+            return _cache.GetOrAdd((pattern, default), k => new Regex(k.pattern));
         }
     }
 }

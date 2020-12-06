@@ -19,40 +19,40 @@ namespace Microsoft.Recognizers.Text.DataTypes.TimexExpression
                 DateCollectionName, new Regex[]
                 {
                     // date
-                    new Regex(@"^(?<year>\d\d\d\d)-(?<month>\d\d)-(?<dayOfMonth>\d\d)"),
-                    new Regex(@"^XXXX-WXX-(?<dayOfWeek>\d)"),
-                    new Regex(@"^XXXX-(?<month>\d\d)-(?<dayOfMonth>\d\d)"),
+                    RegexCache.Get(@"^(?<year>\d\d\d\d)-(?<month>\d\d)-(?<dayOfMonth>\d\d)"),
+                    RegexCache.Get(@"^XXXX-WXX-(?<dayOfWeek>\d)"),
+                    RegexCache.Get(@"^XXXX-(?<month>\d\d)-(?<dayOfMonth>\d\d)"),
 
                     // daterange
-                    new Regex(@"^(?<year>\d\d\d\d)"),
-                    new Regex(@"^(?<year>\d\d\d\d)-(?<month>\d\d)"),
-                    new Regex(@"^(?<season>SP|SU|FA|WI)"),
-                    new Regex(@"^(?<year>\d\d\d\d)-(?<season>SP|SU|FA|WI)"),
-                    new Regex(@"^(?<year>\d\d\d\d)-W(?<weekOfYear>\d\d)"),
-                    new Regex(@"^(?<year>\d\d\d\d)-W(?<weekOfYear>\d\d)-(?<weekend>WE)"),
-                    new Regex(@"^XXXX-(?<month>\d\d)"),
-                    new Regex(@"^XXXX-(?<month>\d\d)-W(?<weekOfMonth>\d\d)"),
-                    new Regex(@"^XXXX-(?<month>\d\d)-WXX-(?<weekOfMonth>\d{1,2})"),
-                    new Regex(@"^XXXX-(?<month>\d\d)-WXX-(?<weekOfMonth>\d)-(?<dayOfWeek>\d)"),
+                    RegexCache.Get(@"^(?<year>\d\d\d\d)"),
+                    RegexCache.Get(@"^(?<year>\d\d\d\d)-(?<month>\d\d)"),
+                    RegexCache.Get(@"^(?<season>SP|SU|FA|WI)"),
+                    RegexCache.Get(@"^(?<year>\d\d\d\d)-(?<season>SP|SU|FA|WI)"),
+                    RegexCache.Get(@"^(?<year>\d\d\d\d)-W(?<weekOfYear>\d\d)"),
+                    RegexCache.Get(@"^(?<year>\d\d\d\d)-W(?<weekOfYear>\d\d)-(?<weekend>WE)"),
+                    RegexCache.Get(@"^XXXX-(?<month>\d\d)"),
+                    RegexCache.Get(@"^XXXX-(?<month>\d\d)-W(?<weekOfMonth>\d\d)"),
+                    RegexCache.Get(@"^XXXX-(?<month>\d\d)-WXX-(?<weekOfMonth>\d{1,2})"),
+                    RegexCache.Get(@"^XXXX-(?<month>\d\d)-WXX-(?<weekOfMonth>\d)-(?<dayOfWeek>\d)"),
                 }
             },
             {
                 TimeCollectionName, new Regex[]
                 {
                     // time
-                    new Regex(@"T(?<hour>\d\d)Z?$"),
-                    new Regex(@"T(?<hour>\d\d):(?<minute>\d\d)Z?$"),
-                    new Regex(@"T(?<hour>\d\d):(?<minute>\d\d):(?<second>\d\d)Z?$"),
+                    RegexCache.Get(@"T(?<hour>\d\d)Z?$"),
+                    RegexCache.Get(@"T(?<hour>\d\d):(?<minute>\d\d)Z?$"),
+                    RegexCache.Get(@"T(?<hour>\d\d):(?<minute>\d\d):(?<second>\d\d)Z?$"),
 
                     // timerange
-                    new Regex(@"^T(?<partOfDay>DT|NI|MO|AF|EV)$"),
+                    RegexCache.Get(@"^T(?<partOfDay>DT|NI|MO|AF|EV)$"),
                 }
             },
             {
                 PeriodCollectionName, new Regex[]
                 {
-                    new Regex(@"^P(?<amount>\d*\.?\d+)(?<dateUnit>Y|M|W|D)$"),
-                    new Regex(@"^PT(?<amount>\d*\.?\d+)(?<timeUnit>H|M|S)$"),
+                    RegexCache.Get(@"^P(?<amount>\d*\.?\d+)(?<dateUnit>Y|M|W|D)$"),
+                    RegexCache.Get(@"^PT(?<amount>\d*\.?\d+)(?<timeUnit>H|M|S)$"),
                 }
             },
         };
