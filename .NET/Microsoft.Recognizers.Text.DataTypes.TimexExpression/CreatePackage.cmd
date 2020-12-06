@@ -11,6 +11,7 @@ for /f "usebackq tokens=*" %%i in (`..\packages\vswhere.2.2.7\tools\vswhere -lat
 if not exist ..\nuget mkdir ..\nuget
 if exist ..\nuget\Microsoft.Recognizers.Text.DataTypes.TimexExpression*.nupkg erase /s ..\nuget\Microsoft.Recognizers.Text.DataTypes.TimexExpression*.nupkg
 "%MSBuildDir%\MSBuild\15.0\Bin\MSBuild.exe" /property:Configuration=release Microsoft.Recognizers.Text.DataTypes.TimexExpression.csproj
+for /f %%v in ('powershell -noprofile "(Get-Command .\bin\release\netstandard2.0\Microsoft.Recognizers.Text.dll).FileVersionInfo.FileVersion"') do set basic=%%v
 for /f %%v in ('powershell -noprofile "(Get-Command .\bin\release\netstandard2.0\Microsoft.Recognizers.Text.DataTypes.TimexExpression.dll).FileVersionInfo.FileVersion"') do set numberVersion=%%v
 ..\buildtools\NuGet.exe pack Microsoft.Recognizers.Text.DataTypes.TimexExpression.nuspec -symbols -properties version=%numberVersion% -OutputDirectory ..\nuget
 
